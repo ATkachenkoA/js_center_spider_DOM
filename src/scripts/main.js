@@ -8,6 +8,10 @@ window.addEventListener('load', () => {
     return;
   }
 
+  if (getComputedStyle(wall).position === 'static') {
+    wall.style.position = 'relative';
+  }
+
   const wallWidth = wall.clientWidth;
   const wallHeight = wall.clientHeight;
 
